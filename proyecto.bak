@@ -3,6 +3,7 @@
 #include<conio.h>
 #include<stdio.h>
 #include<fstream.h>
+#include<time.h>
 
 
 main()
@@ -40,6 +41,16 @@ main()
                cout<<"\nFin de hora de clases";
 					cout<<"\n";
      			   cin>>i_f;
+
+      case 2 : cout<<"\n";
+
+      case 3 : cout<<"\n";
+
+      case 4 : cout<<"\n";
+
+
+
+
 	}
 	cout<<"\n";
 

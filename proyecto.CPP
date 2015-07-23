@@ -4,13 +4,18 @@
 #include<stdio.h>
 #include<fstream.h>
 #include<time.h>
+#include<Windows.h>
+#include<conio.h>
+#include<string.h>
+#include<dos.h>
 
-
+const int 
 main()
 
 {
 
-	int opc, nm , ns , ds , i_c , i_f ;
+	char nm[20] , ns[20] , nd[20], ds[20];
+	int h_i , h_f , mi , mf;
 
 	cout<<"\n----------------MEnU-----------------";
 	cout<<"\n1._Ingrese una nueva hora de clases";
