@@ -5,28 +5,16 @@
 #include<fstream.h>
 #include<time.h>
 #include<Windows.h>
-#include<conio.h>
-#include<string.h>
+#include<string.h>
 #include<dos.h>
 
-const int 
+const int
 main()
 
 {
 
 	char nm[20] , ns[20] , nd[20], ds[20];
 	int h_i , h_f , mi , mf , opc;
-
-	cout<<"\n----------------MEnU-----------------";
-	cout<<"\n1._Ingrese una nueva hora de clases";
-	cout<<"\n2._Ver el horario de hoy";
-	cout<<"\n3._Ver el horario de la semana";
-	cout<<"\n4._Salir";
-
-
-	cout<<"\nElija la opcion --------->";
-	cin>>opc;
-
 
    struct time tiempo;
 	gettime(&tiempo);
@@ -42,28 +30,80 @@ main()
    int anio = fecha.da_year;
    cout<<dia<<"de "<<mes<<"de "<<anio;
 
+   {
+ 					/*persona Alex;
+               printf("\t Bienvenidos:");
+ 					printf("\t \t \n Menu de opciones:");
+ 					printf("\n 1.Ingresar una nueva hora de clases:");
+ 					printf("\n 2.Ver el horario de hoy:");
+ 					printf("\n 3.Horario de la semana:");
+ 					printf("\n 4.Salir:");
+ 					printf("\n Por favor seleccione la opcion que desea:\n");
+ 					scanf("%d", &opcion);
+               fflush(stdin);
+ 					return opcion;
+               */
+   ifstream archivoPersonas("C:\Users\Personal\Documents\GitHub\Proyecto1.txt");
+   if (!archivoPersonas)
+   {
+   ofstream archivoPersonas("C:\Users\Personal\Documents\GitHub\Proyecto1.txt");
 
+   ;
+   }
+   else
+   {
+					/*persona Alex;
+               /*persona Alex;
+               printf("\t Bienvenidos:");
+ 					printf("\t \t \n Menu de opciones:");
+ 					printf("\n 1.Ingresar una nueva hora de clases:");
+ 					printf("\n 2.Ver el horario de hoy:");
+ 					printf("\n 3.Horario de la semana:");
+ 					printf("\n 4.Salir:");
+ 					printf("\n Por favor seleccione la opcion que desea:\n");
+ 					scanf("%d", &opcion);
+               fflush(stdin);
+ 					return opcion;*/
+   //persona lista[10];
+   //for (int i = 0; i < 3; i++)
+   {
 
+   }
+    }
+
+    	int opcion;
+ 	printf("\t Bienvenidos");
+ 	printf("\t \t \n Menu de Opciones");
+ 	printf("\n 1.Ingresar una nueva hora de clases");
+ 	printf("\n 2.Ver el horario de hoy");
+ 	printf("\n 3.Horario de la semana");
+ 	printf("\n 4.Salir");
+ 	printf("\n Ingrese la opcion que desea\n");
+ 	scanf("%d", &opcion);
+   fflush(stdin);
+ 	return opcion;
+
 
 	system("cls");
 	switch(opc)
 
 	{
 
-		case 1 : cout<<"\nIngrese Nombre de la materia";
-      			cin>>nm;
-					cout<<"\nIngrese Nombre del semestre";
-      			cout<<"\n";
-					cin>>ns;
-					cout<<"\nIngrese Dia de la semana";
-					cout<<"\n";
-      			cin>>nd;
-					cout<<"\nHora de inicio de clases";
-					cout<<"\n";
-      			cin>>h_i;
-               cout<<"\nFin de hora de clases";
-					cout<<"\n";
-     			   cin>>h_f;
+		case 1 : printf<<"\nIngrese Nombre de la materia";
+      			scanf>>nm;
+      			printf<<"\nIngrese Nombre del semestre";
+      			printf<<"\n";
+               scanf>>ns;
+               printf<<"\nIngrese Dia de la semana";
+               printf<<"\n";
+               scanf>>nd;
+               printf<<"\nHora de inicio de clases";
+               printf<<"\n";
+               scanf>>h_i;
+               printf<<"\nFin de hora de clases";
+               printf<<"\n";
+      			scanf>>h_f;
+
 
       case 2 : cout<<"\n";
 
@@ -78,4 +118,6 @@ main()
 	cout<<"\n";
 
 	system("pause");
+
+}
 }
