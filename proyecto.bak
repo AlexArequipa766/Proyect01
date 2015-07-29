@@ -1,124 +1,25 @@
-#include<iostream.h>
-#include<stdlib.h>
-#include<conio.h>
+#include<Windows.h>
 #include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<iostream.h>
 #include<fstream.h>
 #include<time.h>
-#include<Windows.h>
-#include<conio.h>
-#include<string.h>
 #include<dos.h>
 
-const int
-main()
 
-{
+int Menuprincipal(int menu)
+		{
+		int a;
+      do
+ 		{
+      cout<<"\tIngrese la Opcion que desea Ejecutar ";
+   	cin>>menu;
+      if(menu>4)
+      {
+      cout<<"\tError al ingresar el comando\n";
+   	}
+      }while(a<0 && a>=4);
+ 		return menu;
+      }
 
-	char nm[20] , ns[20] , nd[20], ds[20];
-	int h_i , h_f , mi , mf , opc;
-
-   struct time tiempo;
-	gettime(&tiempo);
-   int hora = tiempo.ti_hour;
-   int min = tiempo.ti_min;
-   int sec = tiempo.ti_sec;
-   cout<<hora<<"horas "<<min<<"minutos "<<sec<<"segundos\n";
-
-   struct date fecha;
-	getdate(&fecha);
-   char dia = fecha.da_day;
-   char mes = fecha.da_mon;
-   int anio = fecha.da_year;
-   cout<<dia<<"de "<<mes<<"de "<<anio;
-
-   {
- 					/*persona Alex;
-               printf("\t Bienvenidos:");
- 					printf("\t \t \n Menu de opciones:");
- 					printf("\n 1.Ingresar una nueva hora de clases:");
- 					printf("\n 2.Ver el horario de hoy:");
- 					printf("\n 3.Horario de la semana:");
- 					printf("\n 4.Salir:");
- 					printf("\n Por favor seleccione la opcion que desea:\n");
- 					scanf("%d", &opcion);
-               fflush(stdin);
- 					return opcion;
-               */
-   ifstream archivoPersonas("C:\Users\Personal\Documents\GitHub\Proyecto1.txt");
-   if (!archivoPersonas)
-   {
-   ofstream archivoPersonas("C:\Users\Personal\Documents\GitHub\Proyecto1.txt");
-
-   ;
-   }
-   else
-   {
-					/*persona Alex;
-               /*persona Alex;
-               printf("\t Bienvenidos:");
- 					printf("\t \t \n Menu de opciones:");
- 					printf("\n 1.Ingresar una nueva hora de clases:");
- 					printf("\n 2.Ver el horario de hoy:");
- 					printf("\n 3.Horario de la semana:");
- 					printf("\n 4.Salir:");
- 					printf("\n Por favor seleccione la opcion que desea:\n");
- 					scanf("%d", &opcion);
-               fflush(stdin);
- 					return opcion;*/
-   //persona lista[10];
-   //for (int i = 0; i < 3; i++)
-   {
-
-   }
-    }
-
-    	int opcion;
- 	printf("\t Bienvenidos");
- 	printf("\t \t \n Menu de Opciones");
- 	printf("\n 1.Ingresar una nueva hora de clases");
- 	printf("\n 2.Ver el horario de hoy");
- 	printf("\n 3.Horario de la semana");
- 	printf("\n 4.Salir");
- 	printf("\n Ingrese la opcion que desea\n");
- 	scanf("%d", &opcion);
-   fflush(stdin);
- 	return opcion;
-
-
-	system("cls");
-	switch(opc)
-
-	{
-
-		case 1 : cout<<"\nIngrese Nombre de la materia";
-      			cin>>nm;
-					cout<<"\nIngrese Nombre del semestre";
-      			cout<<"\n";
-					cin>>ns;
-					cout<<"\nIngrese Dia de la semana";
-					cout<<"\n";
-      			cin>>nd;
-					cout<<"\nHora de inicio de clases";
-					cout<<"\n";
-      			cin>>h_i;
-               cout<<"\nFin de hora de clases";
-					cout<<"\n";
-     			   cin>>h_f;
-
-
-      case 2 : cout<<"\n";
-
-      case 3 : cout<<"\n";
-
-      case 4 : cout<<"\n";
-
-
-
-
-	}
-	cout<<"\n";
-
-	system("pause");
-
-}
-}
